@@ -1,0 +1,18 @@
+{
+  image: string;
+  title: string;
+  companyName: string;
+  id: number;
+  description: string;
+  size: number;
+  reviews: number;
+  ratingAvg: number;
+  downloads: number;
+  ratings: [
+    { name: "1 star"; count: number },
+    { name: "2 star"; count: number },
+    { name: "3 star"; count: number },
+    { name: "4 star"; count: number },
+    { name: "5 star"; count: number },
+  ];
+}
