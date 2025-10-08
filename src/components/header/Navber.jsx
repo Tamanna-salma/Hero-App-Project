@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { FaGithub } from "react-icons/fa"
-import Logo from '../../../../Hero-App-Project/src/assets/logo.png'
+import Logo from '../../../src/assets/logo.png'
 
 const Navber = () => {
    const links =<>
-<Link to='./'><li className='m-2 font-bold text-xl text-[#8046ea]'>Home</li></Link>
-<Link to='./about'><li className='m-2 font-bold text-xl'>Apps</li></Link>
-<Link to='./readlist'><li className='m-2 font-bold text-xl'>Installation</li></Link>
+<Link to='./'><li className='m-2 font-bold text-xl text-[#8046ea] border-2'>Home</li></Link>
+<Link to='./app'><li className='m-2 font-bold text-xl  border-2'>Apps</li></Link>
+<Link to='./installation'><li className='m-2 font-bold text-xl'>Installation</li></Link>
   </>
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-1 lg:px-5">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
