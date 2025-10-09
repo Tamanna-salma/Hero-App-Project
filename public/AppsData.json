@@ -219,23 +219,23 @@
     ]
   },
   {
-    "image": "https://i.ibb.co.com/Z1Y4dWfm/image.png",
-    "title": "TravelGo",
-    "companyName": "ExploreMore",
-    "id": 13,
-    "description": "Book flights, hotels, and plan your perfect vacation all in one place.",
-    "size": 70,
-    "reviews": 3720,
-    "ratingAvg": 4.4,
-    "downloads": "6M",
-    "ratings": [
-      { "name": "1 star", "count": 240 },
-      { "name": "2 star", "count": 300 },
-      { "name": "3 star", "count": 560 },
-      { "name": "4 star", "count": 920 },
-      { "name": "5 star", "count": 1700 }
-    ]
-  },
+  "image": "https://i.ibb.co.com/MxskNmZt/image.png",
+  "title": "SkyView",
+  "companyName": "AeroVision Labs",
+  "id": 13,
+  "description": "Explore the night sky with real-time constellations, stars, and planets tracking.",
+  "size": 75,
+  "reviews": 5420,
+  "ratingAvg": 4.8,
+  "downloads": "10M",
+  "ratings": [
+    { "name": "1 star", "count": 180 },
+    { "name": "2 star", "count": 250 },
+    { "name": "3 star", "count": 520 },
+    { "name": "4 star", "count": 1280 },
+    { "name": "5 star", "count": 3190 }
+  ]
+},
   {
     "image": "https://i.ibb.co.com/1H7ygV6/image.png",
     "title": "FocusNow",
@@ -433,25 +433,8 @@
       { "name": "4 star", "count": 900 },
       { "name": "5 star", "count": 2460 }
     ]
-  },
- {
-  "image": "https://i.ibb.co.com/MxskNmZt/image.png",
-  "title": "SkyView",
-  "companyName": "AeroVision Labs",
-  "id": 1,
-  "description": "Explore the night sky with real-time constellations, stars, and planets tracking.",
-  "size": 75,
-  "reviews": 5420,
-  "ratingAvg": 4.8,
-  "downloads": "10M",
-  "ratings": [
-    { "name": "1 star", "count": 180 },
-    { "name": "2 star", "count": 250 },
-    { "name": "3 star", "count": 520 },
-    { "name": "4 star", "count": 1280 },
-    { "name": "5 star", "count": 3190 }
-  ]
-}
+  }
+ 
 ]
 
 

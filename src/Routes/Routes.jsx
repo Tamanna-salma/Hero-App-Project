@@ -5,10 +5,13 @@ import {
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/errorPage/ErrorPage';
 import Home from '../Pages/home/Home';
-import App from '../Pages/App';
 
-import Logo from '../Pages/Logo';
 import Installition from '../Pages/install/Installition';
+import AppCard from '../Pages/card/AppCard';
+import App from '../Pages/App/App';
+import AppDetails from '../Pages/details/AppDetails';
+
+
 
 
 export const router = createBrowserRouter([
@@ -19,21 +22,22 @@ export const router = createBrowserRouter([
         children:[
             {
                 index:true,
-                loader:()=>fetch('../AppsData.json'),
+                
                 path:"/",
                 Component:Home
             },
             {
                 path:"/app",
-                Component:App
+            Component:App
             },
             {
                path:"/Installition",
                Component:Installition
             },
             {
-                path:'/logo',
-                Component:Logo
+                path:'/App/:id',
+                element:<AppDetails></AppDetails>
+
             }
         ]
 
