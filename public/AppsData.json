@@ -1,18 +1,459 @@
-{
-  image: string;
-  title: string;
-  companyName: string;
-  id: number;
-  description: string;
-  size: number;
-  reviews: number;
-  ratingAvg: number;
-  downloads: number;
-  ratings: [
-    { name: "1 star"; count: number },
-    { name: "2 star"; count: number },
-    { name: "3 star"; count: number },
-    { name: "4 star"; count: number },
-    { name: "5 star"; count: number },
-  ];
+[
+  {
+    "image": "https://i.ibb.co.com/RTLcTSgh/image.png",
+    "title": "TaskMaster Pro",
+    "companyName": "SmartSoft Ltd",
+    "id": 1,
+    "description": "Manage your tasks and boost productivity with reminders, goals, and cloud sync.",
+    "size": 42,
+    "reviews": 1843,
+    "ratingAvg": 4.6,
+    "downloads": "1M",
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 460 },
+      { "name": "4 star", "count": 830 },
+      { "name": "5 star", "count": 1930 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8gKcGY2L/image.png",
+    "title": "FitTrack",
+    "companyName": "Wellness Co.",
+    "id": 2,
+    "description": "Track your workouts, calories, and progress toward your fitness goals.",
+    "size": 58,
+    "reviews": 2510,
+    "ratingAvg": 4.3,
+    "downloads": "8M",
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 330 },
+      { "name": "3 star", "count": 610 },
+      { "name": "4 star", "count": 720 },
+      { "name": "5 star", "count": 1130 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Wvx1YDKT/image.png",
+    "title": "PhotoBlend Studio",
+    "companyName": "PixelWorks",
+    "id": 3,
+    "description": "Edit photos with AI filters, creative effects, and background remover tools.",
+    "size": 76,
+    "reviews": 3980,
+    "ratingAvg": 4.8,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 390 },
+      { "name": "4 star", "count": 1020 },
+      { "name": "5 star", "count": 2340 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Z6Lj9RzP/image.png",
+    "title": "NoteMate",
+    "companyName": "ScribbleWorks",
+    "id": 4,
+    "description": "Take beautiful notes, organize ideas, and sync them across your devices.",
+    "size": 33,
+    "reviews": 1460,
+    "ratingAvg": 4.5,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 170 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 520 },
+      { "name": "5 star", "count": 1180 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/7JfvfzSr/image.png",
+    "title": "BudgetBuddy",
+    "companyName": "FinSmart Apps",
+    "id": 5,
+    "description": "Track your expenses, manage budgets, and grow your savings easily.",
+    "size": 47,
+    "reviews": 2210,
+    "ratingAvg": 4.2,
+    "downloads": "7M",
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 310 },
+      { "name": "3 star", "count": 510 },
+      { "name": "4 star", "count": 650 },
+      { "name": "5 star", "count": 920 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/ccF5PBm6/image.png",
+    "title": "CookBook Pro",
+    "companyName": "KitchenTech",
+    "id": 6,
+    "description": "Discover thousands of recipes and create your personalized cookbook.",
+    "size": 61,
+    "reviews": 3090,
+    "ratingAvg": 4.7,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 140 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 890 },
+      { "name": "5 star", "count": 2480 }
+    ]
+  },
+  
+  {
+    "image": "https://i.ibb.co.com/SwVC0RSw/image.png",
+    "title": "Weatherly",
+    "companyName": "SkyNet Labs",
+    "id": 7,
+    "description": "Get real-time weather updates, radar maps, and accurate forecasts.",
+    "size": 39,
+    "reviews": 1860,
+    "ratingAvg": 4.4,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 410 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1360 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8DV0tytJ/image.png",
+    "title": "LangLearn",
+    "companyName": "EduWorld",
+    "id": 8,
+    "description": "Learn new languages through interactive lessons and real-time practice.",
+    "size": 72,
+    "reviews": 5420,
+    "ratingAvg": 4.9,
+    "downloads": "3M",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 160 },
+      { "name": "3 star", "count": 390 },
+      { "name": "4 star", "count": 1020 },
+      { "name": "5 star", "count": 3750 }
+    ]
+  },
+
+  
+  {
+    "image": "https://i.ibb.co.com/hjBLnFD/image.png",
+    "title": "MusicWave",
+    "companyName": "TuneLabs",
+    "id": 9,
+    "description": "Stream millions of songs, create playlists, and enjoy music offline.",
+    "size": 64,
+    "reviews": 8900,
+    "ratingAvg": 4.7,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1600 },
+      { "name": "5 star", "count": 5800 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/S7tm6WwP/image.png",
+    "title": "GameOn",
+    "companyName": "NextGen Studios",
+    "id": 10,
+    "description": "Discover trending mobile games, leaderboards, and achievements.",
+    "size": 120,
+    "reviews": 7400,
+    "ratingAvg": 4.8,
+    "downloads": "12M",
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 6100 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Lz7vN7R9/image.png",
+    "title": "MediCare",
+    "companyName": "HealthPlus",
+    "id": 11,
+    "description": "Track your health reports, medicines, and doctor appointments easily.",
+    "size": 49,
+    "reviews": 4120,
+    "ratingAvg": 4.5,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 480 },
+      { "name": "4 star", "count": 940 },
+      { "name": "5 star", "count": 2270 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/60bHDdvx/image.png",
+    "title": "Bookify",
+    "companyName": "ReadMore Inc",
+    "id": 12,
+    "description": "Read thousands of books, audiobooks, and save your reading progress.",
+    "size": 81,
+    "reviews": 5800,
+    "ratingAvg": 4.6,
+    "downloads": "8M",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 340 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1400 },
+      { "name": "5 star", "count": 3160 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Z1Y4dWfm/image.png",
+    "title": "TravelGo",
+    "companyName": "ExploreMore",
+    "id": 13,
+    "description": "Book flights, hotels, and plan your perfect vacation all in one place.",
+    "size": 70,
+    "reviews": 3720,
+    "ratingAvg": 4.4,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 240 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 560 },
+      { "name": "4 star", "count": 920 },
+      { "name": "5 star", "count": 1700 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/1H7ygV6/image.png",
+    "title": "FocusNow",
+    "companyName": "MindBoost",
+    "id": 14,
+    "description": "Stay productive with focus timers, white noise, and habit tracking.",
+    "size": 37,
+    "reviews": 2240,
+    "ratingAvg": 4.7,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 110 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 310 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 940 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/HDTkgGR0/image.png",
+    "title": "SnapArt",
+    "companyName": "CreativeZone",
+    "id": 15,
+    "description": "Turn your photos into stunning artworks using AI-powered filters.",
+    "size": 68,
+    "reviews": 4950,
+    "ratingAvg": 4.8,
+    "downloads": "10M",
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 3030 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/nqjWRXF8/image.png",
+    "title": "LearnHub",
+    "companyName": "EduPrime",
+    "id": 16,
+    "description": "Online courses, tutorials, and skill development from top instructors.",
+    "size": 88,
+    "reviews": 6840,
+    "ratingAvg": 4.9,
+    "downloads": "11M",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 210 },
+      { "name": "3 star", "count": 470 },
+      { "name": "4 star", "count": 1300 },
+      { "name": "5 star", "count": 3760 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/C5p3BC5b/image.png",
+    "title": "FreshMart",
+    "companyName": "DailyGro",
+    "id": 17,
+    "description": "Order groceries online and get them delivered to your doorstep.",
+    "size": 55,
+    "reviews": 3010,
+    "ratingAvg": 4.4,
+    "downloads": "7M",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 260 },
+      { "name": "3 star", "count": 480 },
+      { "name": "4 star", "count": 920 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/ZzF9dj3M/image.png",
+    "title": "MovieBox",
+    "companyName": "StreamFlix",
+    "id": 18,
+    "description": "Watch and download your favorite movies and web series instantly.",
+    "size": 92,
+    "reviews": 10120,
+    "ratingAvg": 4.6,
+    "downloads": "15M",
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2400 },
+      { "name": "5 star", "count": 5520 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/4RgPPnjK/image.png",
+    "title": "PetCare",
+    "companyName": "AnimalHub",
+    "id": 19,
+    "description": "Find pet care guides, book vet appointments, and track vaccinations.",
+    "size": 52,
+    "reviews": 2200,
+    "ratingAvg": 4.3,
+    "downloads": "3M",
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 370 },
+      { "name": "4 star", "count": 620 },
+      { "name": "5 star", "count": 880 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/BHDKcBc4/image.png",
+    "title": "DriveUp",
+    "companyName": "AutoLink",
+    "id": 20,
+    "description": "Track your car’s mileage, maintenance, and performance effortlessly.",
+    "size": 45,
+    "reviews": 2760,
+    "ratingAvg": 4.5,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 480 },
+      { "name": "4 star", "count": 730 },
+      { "name": "5 star", "count": 1190 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/216jcQMp/image.png",
+    "title": "SecureVault",
+    "companyName": "SafeNet",
+    "id": 21,
+    "description": "Keep your passwords, notes, and files safe with end-to-end encryption.",
+    "size": 36,
+    "reviews": 1890,
+    "ratingAvg": 4.8,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 260 },
+      { "name": "4 star", "count": 590 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/5gVh00sS/image.png",
+    "title": "FashionFit",
+    "companyName": "StyleNow",
+    "id": 22,
+    "description": "Shop trending outfits, try virtual dressing, and get fashion advice.",
+    "size": 63,
+    "reviews": 3570,
+    "ratingAvg": 4.4,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 560 },
+      { "name": "4 star", "count": 940 },
+      { "name": "5 star", "count": 1560 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/rYskBgd/image.png",
+    "title": "NewsBeat",
+    "companyName": "InfoStream",
+    "id": 23,
+    "description": "Get the latest world news, trending topics, and daily briefings.",
+    "size": 40,
+    "reviews": 2650,
+    "ratingAvg": 4.3,
+    "downloads": "8M",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 410 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1050 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Nd5YrGWp/image.png",
+    "title": "StudyPlus",
+    "companyName": "BrainTech",
+    "id": 24,
+    "description": "Boost your exam prep with flashcards, quizzes, and progress tracking.",
+    "size": 57,
+    "reviews": 4100,
+    "ratingAvg": 4.6,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 190 },
+      { "name": "3 star", "count": 420 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 2460 }
+    ]
+  },
+ {
+  "image": "https://i.ibb.co.com/MxskNmZt/image.png",
+  "title": "SkyView",
+  "companyName": "AeroVision Labs",
+  "id": 1,
+  "description": "Explore the night sky with real-time constellations, stars, and planets tracking.",
+  "size": 75,
+  "reviews": 5420,
+  "ratingAvg": 4.8,
+  "downloads": "10M",
+  "ratings": [
+    { "name": "1 star", "count": 180 },
+    { "name": "2 star", "count": 250 },
+    { "name": "3 star", "count": 520 },
+    { "name": "4 star", "count": 1280 },
+    { "name": "5 star", "count": 3190 }
+  ]
 }
+]
+
+
+
+

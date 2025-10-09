@@ -6,8 +6,9 @@ import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/errorPage/ErrorPage';
 import Home from '../Pages/home/Home';
 import App from '../Pages/App';
-import Installition from '../Pages/Installition';
+
 import Logo from '../Pages/Logo';
+import Installition from '../Pages/install/Installition';
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
         children:[
             {
                 index:true,
+                loader:()=>fetch('../AppsData.json'),
                 path:"/",
                 Component:Home
             },
@@ -26,8 +28,8 @@ export const router = createBrowserRouter([
                 Component:App
             },
             {
-                path:"/installition",
-                Component:Installition
+               path:"/Installition",
+               Component:Installition
             },
             {
                 path:'/logo',

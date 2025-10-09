@@ -5,9 +5,9 @@ import Logo from '../../../src/assets/logo.png'
 
 const Navber = () => {
    const links =<>
-<Link to='./'><li className='m-2 font-bold text-xl text-[#8046ea] border-2'>Home</li></Link>
-<Link to='./app'><li className='m-2 font-bold text-xl  border-2'>Apps</li></Link>
-<Link to='./installation'><li className='m-2 font-bold text-xl'>Installation</li></Link>
+<Link to='./'><li className='m-2 font-bold text-xl text-[#8046ea] link link-hover '>Home</li></Link>
+<Link to='./app'><li className='m-2 font-bold text-xl link link-hover'>Apps</li></Link>
+<Link to='./installation'><li className='m-2 font-bold text-xl link link-hover'>Installation</li></Link>
   </>
   return (
     <div className="navbar bg-base-100 shadow-sm px-1 lg:px-5">
@@ -23,9 +23,9 @@ const Navber = () => {
        {links}
       </ul>
     </div>
-    <div className='flex m-1 lg:m-3'>
+    <div className='flex gap-3 m-3 lg:m-3'>
       <img className='w-5 lg:w-7' src={Logo} alt="" />
-       <a className="text-sm lg:text-xl font-bold text-[#8046ea]">HERO.IO</a>
+       <Link to='./' className="text-sm lg:text-xl font-bold text-[#8046ea]">HERO.IO</Link>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -35,7 +35,7 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] text-white"><FaGithub /> Contribute</a>
+    <Link to='./' className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] text-white"><FaGithub /> Contribute</Link>
   </div>
 </div>
   )
