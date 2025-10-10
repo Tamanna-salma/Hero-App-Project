@@ -24,8 +24,8 @@ const Navber = () => {
       </ul>
     </div>
     <div className='flex gap-3 m-3 lg:m-3'>
-      <img className='w-5 lg:w-7' src={Logo} alt="" />
-       <Link to='./' className="text-sm lg:text-xl font-bold text-[#8046ea]">HERO.IO</Link>
+    <Link>  <img className='w-7 lg:w-7' src={Logo} alt="" /></Link>
+       <Link to='./' className="text-sm lg:text-xl font-bold hidden md:flex text-[#8046ea]">HERO.IO</Link>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -35,7 +35,7 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='./' className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] text-white"><FaGithub /> Contribute</Link>
+   <Link to='https://github.com/dashboard'  className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] hover:bg-red-500 text-white"><FaGithub /> Contribute</Link>
   </div>
 </div>
   )
