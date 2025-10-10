@@ -12,6 +12,7 @@ const useApps =()=>{
         .finally(()=>setloding(false))
 
     },[])
+    console.log(allapps);
     return{allapps,loading,error}
 
 

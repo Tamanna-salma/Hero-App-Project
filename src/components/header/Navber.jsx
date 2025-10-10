@@ -5,9 +5,9 @@ import Logo from '../../../src/assets/logo.png'
 
 const Navber = () => {
    const links =<>
-<Link to='./'><li className='m-2 font-bold text-xl text-[#8046ea] link link-hover '>Home</li></Link>
-<Link to='./app'><li className='m-2 font-bold text-xl link link-hover'>Apps</li></Link>
-<Link to='./installation'><li className='m-2 font-bold text-xl link link-hover'>Installation</li></Link>
+<Link to='/'><li className='m-2 font-bold text-xl text-[#8046ea] link link-hover '>Home</li></Link>
+<Link to='/app'><li className='m-2 font-bold text-xl link link-hover'>Apps</li></Link>
+<Link to='/Installition'><li className='m-2 font-bold text-xl link link-hover'>Installation</li></Link>
   </>
   return (
     <div className="navbar bg-base-100 shadow-sm px-1 lg:px-5">
@@ -35,7 +35,7 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-   <Link to='https://github.com/dashboard'  className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] hover:bg-red-500 text-white"><FaGithub /> Contribute</Link>
+   <Link to='https://github.com/dashboard'  className="btn bg-gradient-to-r from-[#8046ea] to-[#9c5ff1]  text-white"><FaGithub /> Contribute</Link>
   </div>
 </div>
   )

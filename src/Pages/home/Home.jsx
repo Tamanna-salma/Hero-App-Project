@@ -27,7 +27,7 @@ const{ allapps,setAllApps} = useApps()
            </div>
 
             <div className=' text-center'>
-                <Link to='./App' className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Show All</Link>
+                <Link to='./App' className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gradient-to-r from-[#8046ea] to-[#9c5ff1] p-4" >Show All</Link>
             </div>
         </div>
     </div>

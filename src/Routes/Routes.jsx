@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  createBrowserRouter,
+    createBrowserRouter,
 } from "react-router";
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/errorPage/ErrorPage';
@@ -16,32 +16,32 @@ import AppDetails from '../Pages/details/AppDetails';
 
 export const router = createBrowserRouter([
     {
-        path:"/",
-        Component:Root,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
+        path: "/",
+        Component: Root,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
-                index:true,
-                
-                path:"/",
-                Component:Home
+                index: true,
+
+                path: "/",
+                Component: Home
             },
             {
-                path:"/app",
-            Component:App
+                path: "/app",
+                Component: App
             },
             {
-               path:"/Installition",
-               Component:Installition
+                path: "/Installition",
+                Component: Installition
             },
             {
-                path:'/App/:id',
-                element:<AppDetails></AppDetails>
+                path: '/App/:id',
+                element: <AppDetails></AppDetails>
 
             }
         ]
 
 
     }
-  
+
 ]);

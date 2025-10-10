@@ -66,9 +66,4 @@ const Footer = () => {
 }
 
 export default Footer
-{/* <footer className=" text-center ">
-      
- 
- 
-  
-</footer> */}
+

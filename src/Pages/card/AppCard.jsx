@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router';
 
 const AppCard = ({singleApp}) => {
-      // console.log(singleApp);
-  const{image,downloads,description,title,ratings,id}=singleApp ||{};
+  const{image,downloads,companyName,title,id}=singleApp ||{};
   return (
     <div>
        <div  className="card bg-base-100  shadow-sm hover:scale-105 transition ease-in-out  p-4">
@@ -13,14 +12,12 @@ const AppCard = ({singleApp}) => {
   <div className="card-body">
     <h2 className="card-title">
      { title}
-      
+     
     </h2>
-    <p>{description}</p>
+      <p>{companyName}</p>
     <div className="card-actions justify-between">
       <div className="badge badge-outline">{downloads}</div>
-      {/* {
-        ratings.map(rating=><div className="badge badge-outline">{rating}</div>)
-      } */}
+     {}
     </div>
   </div>
 </div>
