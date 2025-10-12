@@ -33,13 +33,6 @@ const AppDetails = () => {
             </div>
         </div>
 
-        if (!detail)
-        return (
-            <p className='text-center text-2xl font-bold  py-10'>
-                App already copy! app not found
-            </p>
-        );
-
     const { image, downloads, description, title, reviews,ratings, size, ratingAvg,companyName } = detail || {};
 
     const handleInstallNow = () => {
@@ -65,9 +58,6 @@ const AppDetails = () => {
         });
     };
 
-
-
-    
     return (
         <div className='bg-[#f5f5f5]'>
             <div className='card-body container mx-auto px-9 py-7'>
@@ -138,7 +128,7 @@ const AppDetails = () => {
             {/* chart */}
             <div className='mt-5 container mx-auto text-center px-10 w-full md:w-6xl lg:w-6xl py-7'>
                 <h3 className='text-xl text-center mb-6 font-bold'>Ratings recharts </h3>
-                <div className='bg-base-100 border rounded-xl p-5 h-60 md:h-80'>
+                <div className='bg-base-100 border rounded-xl p-5 h-80 md:h-96 lg:h-96'>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
 

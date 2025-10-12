@@ -11,9 +11,6 @@ import Installition from '../Pages/install/Installition';
 import App from '../Pages/App/App';
 import AppDetails from '../Pages/details/AppDetails';
 
-
-
-
 export const router = createBrowserRouter([
     {
         path: "/",

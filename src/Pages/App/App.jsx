@@ -14,9 +14,7 @@ const [searchedApp, setSearchedApp] = useState([]);
 
 useEffect(()=>{
 
-  if(loading) return;
 const term = search.trim().toLowerCase();
-
 
   let filteredData;
   if (term) {
@@ -26,7 +24,7 @@ const term = search.trim().toLowerCase();
       setSearchedApp(allapps)
   }
   
-},[search,allapps,loading])
+},[search,allapps,loading]);
  
  if (loading)
     return (
@@ -55,14 +53,24 @@ const term = search.trim().toLowerCase();
           </label>
         </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 container mx-auto px-9 space-x-5 space-y-5 py-7'>
-        {
-          searchedApp.map((singleApp) => <AppCard key={singleApp.id} singleApp={singleApp}></AppCard>)
-        }
-      </div>
+
+      {searchedApp.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 container mx-auto px-9 space-x-5 space-y-5 py-7">
+          {searchedApp.map((singleApp) => (
+            <AppCard key={singleApp.id} singleApp={singleApp} />
+          ))}
+        </div>
+      ) : (
+    
+        <div className="text-center py-16">
+          <h3 className=" text-xl md:text-3xl lg:text-3xl font-bold  mb-4">
+            No Match App 😕
+          </h3>
+        </div>
+      )}
 
       <div className=' text-center p-8'>
-        <Link className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gradient-to-r from-[#8046ea] to-[#9c5ff1]">Show All</Link>
+        <Link to="/" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gradient-to-r from-[#8046ea] to-[#9c5ff1]">Go Back</Link>
       </div>
     </div>
 

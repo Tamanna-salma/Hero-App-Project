@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import found from '../../../src/assets/App-Error.png'
+import useApps from "../../hooks/useApps";
+import Logo from '../../../src/assets/logo.png';
 const Installition = () => {
   const [instalList, setInstalList] = useState([]);
   const [sortorder, setSortorder] = useState("none");
-
+    const {loading } = useApps();
   // localStorage
   useEffect(() => {
+   
     const saveItem = JSON.parse(localStorage.getItem("instalList"));
     if (saveItem) setInstalList(saveItem);
   }, []);
 
-  console.log(sortorder);
   const sortedList = (() => {
     if (sortorder === "app-asc") {
       return [...instalList].sort((a, b) => a.downloads - b.downloads);
@@ -30,6 +32,16 @@ const Installition = () => {
 
     toast.success("App uninstalled successfully!");
   };
+
+    if (loading)
+               return <div className=' text-lg md:text-5xl font-bold text-fuchsia-600 text-center container mx-auto px-9 py-7'>
+                   <div>
+                       <p> loading.....</p>
+                   </div>
+                   <div className='text-center container mx-auto px-3 md:px-9'>
+                       <img className='w-12 text-center animate-spin mt-6' src={Logo} alt="" />
+                   </div>
+               </div>
 
   return (
     <div>
@@ -106,4 +118,4 @@ const Installition = () => {
   );
 };
 
-export default Installition;
+export default Installition

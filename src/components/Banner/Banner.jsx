@@ -16,7 +16,7 @@ const Banner = () => {
             <p className='w-full mt-3 md:mt-5 md:w-2xl lg:w-2xl mx-auto'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
             <div className='space-x-4 md:space-x-7 lg:space-x-7 mt-6'>
 
-                <Link to="https://play.google.com/store/games?hl=en" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gray-200 hover:bg-gray-100 ">< FaGooglePlay className=''/>Google Play</Link>
+                <Link to="https://play.google.com/store/games?hl=en" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gray-200 hover:bg-gray-100 ">< FaGooglePlay className='text-orange-300'/>Google Play</Link>
 
                 <Link to="https://www.apple.com/app-store/" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gray-200 hover:bg-gray-100"><FaAppStoreIos className='text-sky-400'/>App Store</Link>
 

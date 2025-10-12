@@ -3,16 +3,21 @@ import { Link } from 'react-router';
 import { TiStar } from "react-icons/ti";
 import { HiDownload } from "react-icons/hi";
 import Logo from '../../../src/assets/logo.png';
+import useApps from '../../hooks/useApps';
 
 const AppCard = ({singleApp}) => {
+    const {loading } = useApps();
   const{image,downloads, ratingAvg ,companyName,title,id}=singleApp ||{};
 
-{/* <div className='text-5xl font-bold text-fuchsia-600 text-center container mx-auto px-9 py-7'>
-               <p> loading.....</p>
-                <div>
-                    <img className='w-12 text-center mt-6' src={Logo}alt="" />
-                </div>
-            </div> */}
+if (loading)
+        return <div className=' text-lg md:text-5xl font-bold text-fuchsia-600 text-center container mx-auto px-9 py-7'>
+            <div>
+                <p> loading.....</p>
+            </div>
+            <div className='text-center container mx-auto px-3 md:px-9'>
+                <img className='w-12 text-center animate-spin mt-6' src={Logo} alt="" />
+            </div>
+        </div>
   return (
     <div>
    <div  className="card bg-base-100  shadow-sm hover:scale-105 transition ease-in-out  p-4">
