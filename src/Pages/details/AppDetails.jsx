@@ -3,25 +3,37 @@ import { useParams } from 'react-router';
 import useApps from '../../hooks/useApps';
 import download from '../../../src/assets/icon-downloads.png';
 import rating from '../../../src/assets/icon-ratings.png';
+import Logo from '../../../src/assets/logo.png';
 import view from '../../assets/icon-review.png';
-import toast, { Toaster } from "react-hot-toast";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+const MySwal = withReactContent(Swal)
+
 
 const AppDetails = () => {
+    const [isInstalled, setIsInstalled] = useState(false);
     const { id } = useParams();
     const { allapps, loading } = useApps();
     const detail = allapps.find((ap) => String(ap.id) === id);
-    const { image, downloads, description, title, reviews, size,ratingAvg } = detail || {};
 
-    const [isInstalled, setIsInstalled] = useState(false);
-
-
-    useEffect(() => {
+ useEffect(() => {
         const installedApps = JSON.parse(localStorage.getItem('instalList')) || [];
         const alreadyInstalled = installedApps.some((app) => app.id === detail?.id);
         setIsInstalled(alreadyInstalled);
     }, [detail]);
 
-    // Install button click handler
+    if(loading)
+        return <div className=' text-lg md:text-5xl font-bold text-fuchsia-600 text-center container mx-auto px-9 py-7'>
+             <div>  
+                <p> loading.....</p>
+             </div>
+                <div className='text-center container mx-auto px-3 md:px-9'>
+                    <img className='w-12 text-center animate-spin mt-6' src={Logo}alt="" />
+                </div>
+            </div>
+    const { image, downloads, description, title, reviews, size,ratingAvg } = detail || {};
+
     const handleInstallNow = () => {
         if (!detail) return;
 
@@ -30,29 +42,29 @@ const AppDetails = () => {
 
         if (isDuplicate) {
             setIsInstalled(true);
-            alert('Already installed!');
+        
             return;
         }
 
         const updatedList = [...existList, detail];
         localStorage.setItem('instalList', JSON.stringify(updatedList));
         setIsInstalled(true);
-        alert('App installed successfully!');
+
+        MySwal.fire({
+  title: "Install successfully!",
+  text: "You clicked the button!",
+  icon: "success"
+});
     };
 
-    if (loading)
-        return (
-            <p className='text-3xl font-bold text-fuchsia-600 text-center'>
-                loading.....
-            </p>
-        );
+   
 
-    if (!detail)
-        return (
-            <p className='text-center text-2xl font-bold text-red-500 py-10'>
-                App not found!
-            </p>
-        );
+    // if (!detail)
+    //     return (
+    //         <p className='text-center text-2xl font-bold  py-10'>
+    //             App already copy!
+    //         </p>
+    //     );
 
     return (
         <div className='bg-[#f5f5f5]'>
@@ -111,8 +123,7 @@ const AppDetails = () => {
                                 className={`btn mt-5 px-5 py-3 rounded text-white text-lg ${isInstalled
                                         ? 'bg-gray-400 cursor-not-allowed'
                                         : 'bg-green-500 hover:bg-green-600'
-                                    }`}
-                            >
+                                    }`} >
                                 {isInstalled ? '✅ Installed' : 'Install Now'}{' '}
                                 {!isInstalled && <span className='text-sm'>({size})</span>}
                             </button>
@@ -120,8 +131,30 @@ const AppDetails = () => {
                     </div>
                 </div>
             </div>
+{/* chart */}
+<div className='mt-5 container mx-auto text-center px-10 w-full md:w-6xl lg:w-6xl py-7'>
+    <h3 className='text-xl text-center mb-6 font-bold'>Rating </h3>
+    <div className='bg-base-100 border rounded-xl p-5 h-80'>
+<ResponsiveContainer width="100%" height="100%">
+      <BarChart
+        
+        data={allapps}
+       
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="reviews" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
 
-            <div className='container mx-auto px-9 py-7'>
+        <Bar dataKey="ratingAvg" fill="#82ca9d"  />
+      </BarChart>
+    </ResponsiveContainer>
+    </div>
+</div>
+
+
+            <div className='container mx-auto text-center px-9 w-full md:w-3xl lg:w-3xl py-7'>
                 <h1 className='text-xl font-bold'>Description</h1>
                 <p className='text-gray-600 mt-2'>{description}</p>
             </div>

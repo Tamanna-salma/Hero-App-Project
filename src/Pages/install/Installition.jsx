@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-
+import found from '../../../src/assets/App-Error.png'
 const Installition = () => {
   const [instalList, setInstalList] = useState([]);
   const [sortorder, setSortorder] = useState("none");
@@ -11,12 +11,12 @@ const Installition = () => {
     if (saveItem) setInstalList(saveItem);
   }, []);
 
-  
+  console.log(sortorder);
   const sortedList = (() => {
     if (sortorder === "app-asc") {
       return [...instalList].sort((a, b) => a.downloads - b.downloads);
     } else if (sortorder === "app-desc") {
-      return [...instalList].sort((a, b) => b.downloads - a.downloads);
+      return [...instalList].sort(( a,b) => b.downloads - a.downloads);
     } else {
       return instalList;
     }
@@ -45,16 +45,17 @@ const Installition = () => {
         </p>
       </div>
 
-      <div className="flex justify-between items-center py-4 container mx-auto px-9">
-        <h3 className="text-xl">
-          <span>({instalList.length}) Apps Found</span>
+      <div className="flex justify-between gap-1 md:gap-5 items-center py-4 container mx-auto px-9">
+        <h3 className="text-sm md:text-xl">
+          <span>({sortedList.length}) Apps Found</span>
         </h3>
+
         <label className="form-control w-full max-w-xs">
           <select
             className="select select-bordered"
-            value={sortorder}
-            onChange={(e) => setSortorder(e.target.value)}
-          >
+            // value={sortorder}
+            onChange={(e) => setSortorder(e.target.value)}>
+
             <option value="none">Sort by downloads</option>
             <option value="app-asc">Low → High</option>
             <option value="app-desc">High → Low</option>
@@ -70,18 +71,18 @@ const Installition = () => {
                 <img
                   className="object-cover h-32 w-full rounded-md"
                   src={a.image}
-                  alt={a.title}
+                  alt=""
                 />
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-lg font-semibold">{a.title}</h2>
 
                 <div className="card-actions justify-between mt-2">
-                  <div className="badge badge-outline">{a.ratingAvg}</div>
+                  <div className="badge badge-outline">{a.downloads}</div>
                   <div className="badge badge-outline">
                     <button
                       onClick={() => handleRemove(a.id)}
-                      className="text-red-500 hover:text-red-700"
+                      className=""
                     >
                       Uninstall
                     </button>
@@ -91,9 +92,14 @@ const Installition = () => {
             </div>
           ))
         ) : (
-          <p className="text-center text-gray-500 col-span-full py-10">
+         <div  >
+          <div  className=' mt-7 flex items-center justify-center container mx-auto  w-full md:w-5xl lg:w-5xl' >
+                    <img className='w-full md:w-80' src={found} alt="" />
+                  </div>
+           <p className="flex items-center justify-center container mx-auto font-bold text-xl md:text-3xl mt-4 w-full md:w-5xl lg:w-5xl ">
             No installed apps found 😕
           </p>
+         </div>
         )}
       </div>
     </div>

@@ -11,9 +11,9 @@ const Banner = () => {
   return (
     <div className='bg-[#f5f5f5] py-10'>
         <div className='text-center'>
-            <h2 className='font-bold text-xl md:text-4xl lg:text-4xl'>We Build </h2>
+            <p className='font-bold text-xl md:text-4xl lg:text-4xl'>We Build </p>
             <span className='text-[#8046ea] text-xl md:text-4xl lg:text-4xl font-bold'>Productive <span className='text-black text-xl md:text-4xl lg:text-4xl font-bold'>Apps</span></span>
-            <p className='w-full mt-5 md:w-2xl lg:w-2xl mx-auto'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
+            <p className='w-full mt-3 md:mt-5 md:w-2xl lg:w-2xl mx-auto'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
             <div className='space-x-4 md:space-x-7 lg:space-x-7 mt-6'>
 
                 <Link to="https://play.google.com/store/games?hl=en" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-gray-200 hover:bg-gray-100 ">< FaGooglePlay className=''/>Google Play</Link>

@@ -7,7 +7,7 @@ import ErrorPage from '../Pages/errorPage/ErrorPage';
 import Home from '../Pages/home/Home';
 
 import Installition from '../Pages/install/Installition';
-import AppCard from '../Pages/card/AppCard';
+
 import App from '../Pages/App/App';
 import AppDetails from '../Pages/details/AppDetails';
 
