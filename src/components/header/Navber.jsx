@@ -6,22 +6,22 @@ import Logo from '../../../src/assets/logo.png'
 const Navber = () => {
   const links = <>
     
-    <div className='flex flex-col md:flex items-center gap-1 lg:gap-3'>
+    <div className='flex flex-col md:flex-row items-center gap-1 lg:gap-3'>
       <li>
       <NavLink to='./' className={({ isActive }) =>
-        isActive ? 'text-purple-600 border-b-2  border-purple-600  text-xl font-bold' : 'text-gray-600 hover:text-purple-600'
+        isActive ? 'text-purple-600 border-b-2  border-purple-600  text-xl font-bold' : 'text-gray-600 text-xl font-bold hover:text-purple-600'
       }
       >Home</NavLink>
     </li>
     <li>
       <NavLink to='./app' className={({ isActive }) =>
-        isActive ? 'text-purple-600 border-b-2  border-purple-600  text-xl font-bold' : 'text-gray-600 font-bold hover:text-purple-600'
+        isActive ? 'text-purple-600 border-b-2  border-purple-600  text-xl font-bold' : 'text-gray-600 text-xl font-bold hover:text-purple-600'
       }
       >Apps</NavLink>
     </li>
     <li>
       <NavLink to='./Installition' className={({ isActive }) =>
-        isActive ? 'text-purple-600 border-b-2 border-purple-600  text-xl font-bold' : 'text-gray-600 hover:text-purple-600'
+        isActive ? 'text-purple-600 border-b-2 border-purple-600  text-xl font-bold' : 'text-gray-600 text-xl font-bold hover:text-purple-600'
       }
       >Installation</NavLink>
     </li>
