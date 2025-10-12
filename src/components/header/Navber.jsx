@@ -6,7 +6,7 @@ import Logo from '../../../src/assets/logo.png'
 const Navber = () => {
    const links =<>
 <Link to='/'><li className='m-2 font-bold text-xl text-[#8046ea] link link-hover '>Home</li></Link>
-<Link to='/app'><li className='m-2 font-bold text-xl link link-hover'>Apps</li></Link>
+<Link to='/app'><li className='m-2 font-bold text-xl link link-hover'> Apps</li></Link>
 <Link to='/Installition'><li className='m-2 font-bold text-xl link link-hover'>Installation</li></Link>
   </>
   return (

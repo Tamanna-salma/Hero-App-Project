@@ -45,7 +45,6 @@ const term = search.trim().toLowerCase();
        
       </div>
       
-
  <div className='flex gap-2 md:gap-4 justify-between items-center container mx-auto mt-3 md:mt-6 px-13'>
           <p className='w-full'><span className='text-sm'>({searchedApp.length})App Found</span></p>
           <label className="input">

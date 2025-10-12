@@ -6,7 +6,7 @@ import AppCard from '../card/AppCard';
 import Logo from '../../../src/assets/logo.png';
 
 const Home = () => {
-  const { allapps, setAllApps, loading } = useApps();
+  const { allapps,  loading } = useApps();
 
   if (loading) {
     return (
