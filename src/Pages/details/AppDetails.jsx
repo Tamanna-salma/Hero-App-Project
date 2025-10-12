@@ -17,22 +17,30 @@ const AppDetails = () => {
     const { allapps, loading } = useApps();
     const detail = allapps.find((ap) => String(ap.id) === id);
 
- useEffect(() => {
+    useEffect(() => {
         const installedApps = JSON.parse(localStorage.getItem('instalList')) || [];
         const alreadyInstalled = installedApps.some((app) => app.id === detail?.id);
         setIsInstalled(alreadyInstalled);
     }, [detail]);
 
-    if(loading)
+    if (loading)
         return <div className=' text-lg md:text-5xl font-bold text-fuchsia-600 text-center container mx-auto px-9 py-7'>
-             <div>  
+            <div>
                 <p> loading.....</p>
-             </div>
-                <div className='text-center container mx-auto px-3 md:px-9'>
-                    <img className='w-12 text-center animate-spin mt-6' src={Logo}alt="" />
-                </div>
             </div>
-    const { image, downloads, description, title, reviews, size,ratingAvg } = detail || {};
+            <div className='text-center container mx-auto px-3 md:px-9'>
+                <img className='w-12 text-center animate-spin mt-6' src={Logo} alt="" />
+            </div>
+        </div>
+
+        if (!detail)
+        return (
+            <p className='text-center text-2xl font-bold  py-10'>
+                App already copy! app not found
+            </p>
+        );
+
+    const { image, downloads, description, title, reviews,ratings, size, ratingAvg,companyName } = detail || {};
 
     const handleInstallNow = () => {
         if (!detail) return;
@@ -42,7 +50,7 @@ const AppDetails = () => {
 
         if (isDuplicate) {
             setIsInstalled(true);
-        
+
             return;
         }
 
@@ -51,21 +59,15 @@ const AppDetails = () => {
         setIsInstalled(true);
 
         MySwal.fire({
-  title: "Install successfully!",
-  text: "You clicked the button!",
-  icon: "success"
-});
+            title: "Install successfully!",
+            text: "You clicked the button!",
+            icon: "success"
+        });
     };
 
-   
 
-    // if (!detail)
-    //     return (
-    //         <p className='text-center text-2xl font-bold  py-10'>
-    //             App already copy!
-    //         </p>
-    //     );
 
+    
     return (
         <div className='bg-[#f5f5f5]'>
             <div className='card-body container mx-auto px-9 py-7'>
@@ -79,7 +81,7 @@ const AppDetails = () => {
                             APP Details Page
                         </p>
                         <h2 className='card-title text-2xl font-semibold'>{title}</h2>
-                        <p className='text-gray-500 mb-4'>Developed by productive.io</p>
+                        <p className='text-gray-500 mb-4'>Developed by {companyName}</p>
 
                         <hr className='border-t-2 border-gray-300 w-full my-6 rounded-full' />
 
@@ -120,38 +122,40 @@ const AppDetails = () => {
                             <button
                                 onClick={handleInstallNow}
                                 disabled={isInstalled}
-                                className={`btn mt-5 px-5 py-3 rounded text-white text-lg ${isInstalled
-                                        ? 'bg-gray-400 cursor-not-allowed'
-                                        : 'bg-green-500 hover:bg-green-600'
+                                className={`btn mt-5 px-5 py-3 rounded text-white text-sm md:text-lg ${isInstalled
+                                    ? 'bg-gray-400 cursor-not-allowed'
+                                    : 'bg-green-500 hover:bg-green-600'
                                     }`} >
                                 {isInstalled ? '✅ Installed' : 'Install Now'}{' '}
-                                {!isInstalled && <span className='text-sm'>({size})</span>}
+                                {!isInstalled && <span className='text-sm'>({size} MB)</span>}
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-{/* chart */}
-<div className='mt-5 container mx-auto text-center px-10 w-full md:w-6xl lg:w-6xl py-7'>
-    <h3 className='text-xl text-center mb-6 font-bold'>Rating </h3>
-    <div className='bg-base-100 border rounded-xl p-5 h-80'>
-<ResponsiveContainer width="100%" height="100%">
-      <BarChart
-        
-        data={allapps}
-       
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="reviews" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
 
-        <Bar dataKey="ratingAvg" fill="#82ca9d"  />
-      </BarChart>
-    </ResponsiveContainer>
-    </div>
-</div>
+
+            {/* chart */}
+            <div className='mt-5 container mx-auto text-center px-10 w-full md:w-6xl lg:w-6xl py-7'>
+                <h3 className='text-xl text-center mb-6 font-bold'>Ratings recharts </h3>
+                <div className='bg-base-100 border rounded-xl p-5 h-60 md:h-80'>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <BarChart
+
+                            data={[...ratings].reverse()}  layout="vertical">
+                               
+
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis type="number"  />
+                            <YAxis type="category" dataKey="name" />
+                            <Tooltip />
+                            <Legend />
+
+                            <Bar dataKey="count" fill="#ff8811" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
+            </div>
 
 
             <div className='container mx-auto text-center px-9 w-full md:w-3xl lg:w-3xl py-7'>
