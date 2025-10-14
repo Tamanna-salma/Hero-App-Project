@@ -14,9 +14,9 @@ const Home = () => {
         <p>Loading.....</p>
         <div className="text-center container mx-auto px-3 md:px-9">
           <img
-            className="w-12 text-center animate-spin mt-6 mx-auto"
+            className="w-12 text-center container animate-spin mt-6 mx-auto"
             src={Logo}
-            alt="loading-logo"
+            alt=""
           />
         </div>
       </div>

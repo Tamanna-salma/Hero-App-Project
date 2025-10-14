@@ -114,7 +114,7 @@ const AppDetails = () => {
                                 disabled={isInstalled}
                                 className={`btn mt-5 px-5 py-3 rounded text-white text-sm md:text-lg ${isInstalled
                                     ? 'bg-gray-400 cursor-not-allowed'
-                                    : 'bg-green-500 hover:bg-green-600'
+                                    : 'bg-green-500 hover:bg-green-400'
                                     }`} >
                                 {isInstalled ? '✅ Installed' : 'Install Now'}{' '}
                                 {!isInstalled && <span className='text-sm'>({size} MB)</span>}
@@ -126,8 +126,8 @@ const AppDetails = () => {
 
 
             {/* chart */}
-            <div className='mt-5 container mx-auto text-center px-10 w-full md:w-6xl lg:w-6xl py-7'>
-                <h3 className='text-xl text-center mb-6 font-bold'>Ratings recharts </h3>
+            <div className='mt-5 container mx-auto text-center px-10 w-full md:w-7xl lg:w-7xl py-7'>
+                <h3 className='text-xl text-center mb-6 font-bold'>Ratings </h3>
                 <div className='bg-base-100 border rounded-xl p-5 h-80 md:h-96 lg:h-96'>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart

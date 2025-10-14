@@ -398,24 +398,7 @@
       { "name": "5 star", "count": 1560 }
     ]
   },
-  {
-    "image": "https://i.ibb.co.com/rYskBgd/image.png",
-    "title": "NewsBeat",
-    "companyName": "InfoStream",
-    "id": 23,
-    "description": "Stay informed with NewsBeat — your personal news companion. Get real-time updates, breaking headlines, and trending stories from trusted sources. Customize your feed by topic and never miss what matters most around the world.",
-    "size": 40,
-    "reviews": 2650,
-    "ratingAvg": 4.3,
-    "downloads": 800,
-    " ": [
-      { "name": "1 star", "count": 150 },
-      { "name": "2 star", "count": 240 },
-      { "name": "3 star", "count": 410 },
-      { "name": "4 star", "count": 800 },
-      { "name": "5 star", "count": 1050 }
-    ]
-  },
+ 
   {
     "image": "https://i.ibb.co.com/Nd5YrGWp/image.png",
     "title": "StudyPlus",

@@ -15,14 +15,14 @@ if (loading)
                 <p> loading.....</p>
             </div>
             <div className='text-center container mx-auto px-3 md:px-9'>
-                <img className='w-12 text-center animate-spin mt-6' src={Logo} alt="" />
+                <img className='w-12 text-center mx-auto animate-spin mt-6' src={Logo} alt="" />
             </div>
         </div>
   return (
     <div>
    <div  className="card bg-base-100  shadow-sm hover:scale-105 transition ease-in-out  p-4">
   <figure className='bg-gray-200 w-2/3  mx-auto p-4'>
-   <Link to={`/App/${id}`}><img className='' src={image} alt="Shoes" /></Link> 
+   <Link to={`/App/${id}`}><img className='' src={image} alt="" /></Link> 
   </figure >
   <div className="card-body">
     <h2 className="card-title">
@@ -31,7 +31,10 @@ if (loading)
     </h2>
       <p>{companyName}</p>
     <div className="card-actions justify-between">
-      <div className="badge badge-outline border-gray-500 flex text-green-500 "> <HiDownload className='text-green-500 '/>{downloads}</div>
+      <div className="badge badge-outline border-gray-500 flex text-green-500 ">
+         <HiDownload className='text-green-500 '/>{downloads}
+         </div>
+
      <div className="badge badge-outline"><TiStar className='text-red-500' />{ratingAvg}</div>
     </div>
   </div>

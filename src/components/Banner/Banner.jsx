@@ -52,7 +52,7 @@ const Banner = () => {
                     </div>
                     </div>
 
-                    <div className='flex items-center gap-10'>
+                    <div className='flex items-center gap-11'>
                         <div className=''>
                         <p className='text-purple-300 mb-3'>Active Apps</p>
                         <h2 className='text-4xl font-bold text-white mb-3'>132+</h2>

@@ -28,8 +28,7 @@ const Navber = () => {
     </div>
 
   </>
-
-
+  
   return (
     <div className="navbar bg-base-100 shadow-sm px-1 lg:px-5">
       <div className="navbar-start">
